@@ -1,6 +1,6 @@
 ﻿namespace V3
 {
-    public class UnitTest1
+    public sealed class UnitTest1
     {
         public static TheoryData<Guid> Data => new TheoryData<Guid>
         {
@@ -8,13 +8,11 @@
             Guid.NewGuid()
         };
 
-
         [Theory]
         [MemberData(nameof(Data))]
         public void Test1(Guid id)
         {
             Assert.True(true);
         }
-
     }
 }
